@@ -9,7 +9,7 @@
 #define MATRIZ_H_
 
 template<class E, int rows, int cols>
-class Matriz {
+class Matriz{
 	private:
 		E mat[rows][cols];
 	public:
@@ -20,8 +20,9 @@ class Matriz {
 		//Matriz<E,rows,cols> operator+(Matriz<E,rows,cols> b);
 		//Matriz<E,rows,cols> operator-(Matriz<E,rows,cols> b);
 		//Matriz<E,rows,cols> operator-();
-	        //Matriz<E,rows,cols> operator*(const E &b);
-		Matriz operator*(const Matriz &b);
+	        template<E, int r, int c>
+                Matriz<E,rows,cols> operator*(const Matriz<E,r,c> &b);
+		//Matriz operator*(const Matriz &b);
 		//Matriz<E,row,cols>  operator^(const E &b);
 		void printMatriz();
 };

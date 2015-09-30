@@ -82,10 +82,10 @@ void Matriz<E, rows, cols>::printMatriz(){
 }
 
 
-
-//template<class E,int rows,int cols>
-Matriz Matriz::operator*(const Matriz &b){
-	/*Matriz<E,rows,cols> retMat(0);
+template<int r,int c>
+template<class E,int rows,int cols>
+Matriz<E,r,c> Matriz<E,rows,cols>::operator*(const Matriz<E,r,c> &b){
+	Matriz<E,rows,cols> retMat(0);
 	E sum = 0;
 
 	for(int k = 0 ; k < rows ; k++){
@@ -98,8 +98,7 @@ Matriz Matriz::operator*(const Matriz &b){
 		}
 	}
 
-	return retMat;*/
-	return NULL;
+	return retMat;
 }
 /*
 template<class E,int rows,int cols>
@@ -142,7 +141,7 @@ int main(){
 
 	//(a+b).printMatriz();
 	//(b-a).printMatriz();
-	(a*b).printMatriz();
+	//(a*b).printMatriz();
 	//(-a).printMatriz();
 
 	//system("pause");
