@@ -81,11 +81,12 @@ int Matriz<E, rows, cols>::getColuna(){
 	this->c;
 }
 
-template<class E,int rows,int cols>
-Matriz<E> Matriz<E, rows, cols>::operator*(Matriz<E,rows,cols> b){
-	Matriz<E,getColuna(),b.getLinha()> retMat(0);
+/*template<class E,int rows,int cols>
+template<class E,int r,int c>
+Matriz<E, cols, r> Matriz<E, cols, r>::operator*(Matriz<E,r,c> b){
+	Matriz<E,cols,r> retMat(0);
 	E sum = 0;
-
+	/*
 	for(int k = 0 ; k < getLinha() ; k++){
 		for(int i = 0; i < getColuna() ; i ++){
 			for(int j = 0 ; j < b.getColuna() ; j ++) {
@@ -97,7 +98,7 @@ Matriz<E> Matriz<E, rows, cols>::operator*(Matriz<E,rows,cols> b){
 	}
 
 	return retMat;
-}
+}*/
 
 int main(){
 	Matriz<int,2,3> a(7);
@@ -108,7 +109,7 @@ int main(){
 
 	//(a+b).printMatriz();
 	//(b-a).printMatriz();
-	(a*b).printMatriz();
+	//(a*b).printMatriz();
 
 	system("pause");
 	return 0;
