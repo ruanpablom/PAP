@@ -118,15 +118,14 @@ Matriz<E,rows,cols> Matriz<E,rows,cols>::operator*(const E &b){
 
 
 int main(){
-	Matriz<int,3,3> a(7);
-	Matriz<int,3,3> b(1);
+	Matriz<int,3,2> a(7);
+	Matriz<int,2,3> b(1);
 
 	a.printMatriz();
 	b.printMatriz();
-
 	//(a+b).printMatriz();
 	//(b-a).printMatriz();
-	(a^2).printMatriz();
+	(a*b).printMatriz();
 
 	//(-a).printMatriz();
 	//system("pause");
