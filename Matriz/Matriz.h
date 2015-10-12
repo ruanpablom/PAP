@@ -28,8 +28,8 @@ class Matriz{
             this->mat[row][col] = value;
         }
 
-        E at(int row, int col){
-            return this->mat[row][col];
+        E const at(int row, int col){
+            return mat[row][col];
         }
 
         Matriz<E,rows,cols> operator+(Matriz<E,rows,cols> b){
@@ -63,7 +63,7 @@ class Matriz{
 
 
         template<int r,int c> 
-            Matriz<E,cols,r> operator*(const Matriz<E,r,c> &b){
+            Matriz<E,cols,r> operator*(Matriz<E,r,c> &b){
                 if(verifica(rows,c)){
 
                     Matriz<E,cols,r> retMat(0);
@@ -72,17 +72,32 @@ class Matriz{
                     for(int k = 0 ; k < rows ; k++){
                         for(int i = 0; i < cols; i ++){
                             for(int j = 0 ; j < r; j ++) {
-                                sum+=((E)this->at(i,j))*((E)b.at(j,i));
+                                sum+=(at(i,j))*(b.at(j,i));
                             }
                             retMat.setValue(k,i,sum);
                             sum=0;
                         }
                     }
+
                     return retMat;
                 }else{
                     cout<<"Matrizes inválidas,  número de linhas diferente do número de colunas!"<<endl;
                 }
             }
+
+	Matriz<E,rows,cols> operator*(E b){
+             Matriz<E,rows,cols> retMat(0);
+             E sum = 0;
+
+             for(int k = 0 ; k < rows ; k++){
+                 for(int i = 0; i < cols; i ++){
+                     retMat.setValue(k,i,b*at(k,i));
+                     sum=0;
+                 }
+             }
+
+             return retMat;
+        }
 
         Matriz<E,rows,cols>  operator^(const E &b){
             Matriz<E,rows,cols> retMat(0);
