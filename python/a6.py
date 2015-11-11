@@ -9,7 +9,7 @@ linha = 0
 coluna = 0
 
 for i in range(0,ordem): 
-	vet2.append(1)
+    vet2.append(1)
 for i in range(0,ordem):
     vet.append(list(vet2))
 
@@ -38,14 +38,17 @@ def checkVet(vet_aux):
         print(vet_aux[i])
     print("\n")
 
-def hadouken(matriz):
-    vetaux = []
-    j=0
-    l=0
-    for i in range(0,ordem):
+def hadouken(matriz): 
+    b = [1,2,3,4,5,6,7,8,9]
+    a = itertools.product(b,repeat=9)
+    while(True):
+        try:
+            vetaux = list(a.__next__())   
+        except StopIteration:
+            break
         for j in range(0,ordem):
-            vetaux.append(matriz[i][j])
-    a = itertools.permutations(vetaux)
-    
+            matriz[j] = vetaux[(j*ordem):(j*ordem)+ordem]
+            #print(matriz)
+        checkVet(matriz)
 
 hadouken(list(vet))
