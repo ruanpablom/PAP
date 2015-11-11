@@ -33,4 +33,4 @@ while erros < 6 and acertos < len(palavra)-1:
 if(erros==6):
     print("Você perdeu. Fim de Jogo!")
 else:
-    print("Você ganhou. Fim de Jogo!")
+        print("Você ganhou. Fim de Jogo!")
