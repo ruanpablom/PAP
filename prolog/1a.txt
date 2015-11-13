@@ -1,0 +1,2 @@
+a - filme(american_beauty,X).
+b - filme(X,1997).
