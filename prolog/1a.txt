@@ -1,2 +1,3 @@
+https://dl.dropboxusercontent.com/u/3287283/PAP/exercicio-prolog.txt
 a - filme(american_beauty,X).
 b - filme(X,1997).
