@@ -1,0 +1,15 @@
+a - filme(american_beauty,X).
+b - filme(X,1997).
+c - filme(X,2000).
+d - filme(X,Y), Y>=1990.
+e - ator(X,Y,_) , ator(Z,Y,_), X \= Z.
+f - atriz(X,scarlett_johansson,_).
+f - atriz(X,scarlett_johansson,_),diretor(X,Y).
+g - ator(X,Y,_),diretor(X,Y).
+g- atriz(X,Y,_),diretor(X,Y).
+
+PARTE 2
+
+a - lancado_depois(M,Y) :- filme(M,X), Y > X.
+b - lancado_depois(M,Y) :- filme(M,X), Y < X.
+c - lancado_depois(M,Y) :- filme(M,X), Y = X.

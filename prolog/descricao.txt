@@ -1,0 +1,23 @@
+/*Exercício
+-------------------------------------------------------------------------------------------
+Parte 1: Escreve as 'queries' para responder as seguintes perguntas.
+
+    a. Em qual ano foi lançado o filme "American Beauty"?
+    b. Quais filmes foram lançados em 1987?
+    c. Quais filmes foram lançados em 2000?
+    d. Quais filmes foram lançados depois de 1990?
+    e. Quais atores apareceram em mais de um filme?
+    f. Em quais filmes Scarlett Johansson apareceu?
+    f. Quais pessoas dirigiram os filmes em que Scarlett Johansson apareceu?
+    g. Algum ator ou atriz foi diretor de filme também? Se sim, quem?
+
+Parte 2: Adicione as seguintes regras ao banco de conhecimento e escreva um exemplo de seu uso:
+
+    a. lancado_depois(M, Y) 		<- o filme M foi lançado depois do ano Y.
+    b. lancado_antes(M, Y) 		<- o filme M foi lançado antes do ano Y.
+    c. mesmo_ano(M1, M2) 		<- o filme M1 e M2 foi lançado no mesmo ano.
+
+
+===========================================================================================
+===========================================================================================
+*/
